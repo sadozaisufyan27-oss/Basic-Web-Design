@@ -1,173 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Pakistan</title>
+
+    <title>Nexora ✨ - Modern Digital Platform</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<div class="containr">
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
 
-    <header>
-        <h1>Explore Pakistan 🇵🇰</h1>
-        <p>Discover the beauty, culture, food, and places of Pakistan.</p>
+        <div class="logo">
+            Nexora ✨
+        </div>
 
-        <nav>
-            <a href="#home">Home</a> |
-            <a href="#places">Places</a> |
-            <a href="#food">Food</a> |
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#products">Products</a>
+            <a href="#blog">Blog</a>
             <a href="#contact">Contact</a>
         </nav>
+
+        <div class="nav-actions">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button id="searchBtn">⌕</button>
+            </div>
+
+            <button class="ask-btn" onclick="scrollToAsk()">Ask Me</button>
+            <button class="login-btn">Login</button>
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
     </header>
 
-    <hr>
 
-    <main>
+    <!-- ================= HERO ================= -->
+    <section id="home" class="hero">
 
-        <section id="home">
-            <h2>Welcome to Pakistan</h2>
+        <div class="hero-content">
 
-            <figure>
-                <img src="pakistan.jpg" alt="Beautiful view of Pakistan" width="500">
-                <figcaption>Beautiful Pakistan</figcaption>
-            </figure>
+            <p class="small-title">WELCOME To The Nexora  </p>
+
+            <h1>
+                Build Your Future
+                <span>With Innovation</span>
+            </h1>
 
             <p>
-                Pakistan is famous for its beautiful mountains,
-                historical places, delicious food, and rich culture.
+                Discover modern digital solutions, creative services
+                and powerful ideas designed to help you grow.
             </p>
 
-            <button>Explore Now</button>
-        </section>
+            <div class="hero-buttons">
+                <a href="#services" class="primary-btn">Explore Now</a>
+                <button class="secondary-btn" onclick="scrollToAsk()">
+                    Ask Me
+                </button>
+            </div>
 
-        <hr>
+        </div>
 
-        <section id="places">
-            <h2>Famous Places</h2>
+        <div class="hero-visual">
 
-            <article>
-                <h3>Hunza Valley</h3>
-                <p>Hunza is famous for its mountains and beautiful scenery.</p>
-            </article>
+            <div class="circle"></div>
 
-            <article>
-                <h3>Badshahi Mosque</h3>
-                <p>A famous historical mosque located in Lahore.</p>
-            </article>
+            <div class="hero-card">
+                <div class="card-icon">✦</div>
+                <h3>Smart Solutions</h3>
+                <p>Creative ideas for a digital world.</p>
+            </div>
 
-            <article>
-                <h3>Swat Valley</h3>
-                <p>Swat is known for its green valleys and natural beauty.</p>
-            </article>
-        </section>
+        </div>
 
-        <hr>
-
-        <section id="food">
-            <h2>Popular Pakistani Foods</h2>
-
-            <ul>
-                <li>Biryani</li>
-                <li>Karahi</li>
-                <li>Nihari</li>
-                <li>Seekh Kabab</li>
-            </ul>
-
-            <h3>Food Ranking</h3>
-
-            <ol>
-                <li>Biryani</li>
-                <li>Karahi</li>
-                <li>Nihari</li>
-            </ol>
-        </section>
-
-        <hr>
-
-        <section>
-
-            <h2>Pakistan Information</h2>
-
-            <table border="1">
-                <tr>
-                    <th>City</th>
-                    <th>Famous For</th>
-                </tr>
-
-                <tr>
-                    <td>Lahore</td>
-                    <td>History</td>
-                </tr>
-
-                <tr>
-                    <td>Islamabad</td>
-                    <td>Beauty</td>
-                </tr>
-
-                <tr>
-                    <td>Karachi</td>
-                    <td>Sea & Food</td>
-                </tr>
-            </table>
-        </section>
-        <hr>
-
-        <section>
-            <h2>Quick Facts</h2>
-
-            <details>
-                <summary>Click to learn more</summary>
-                <p>Pakistan was established on 14 August 1947.</p>
-            </details>
-
-            <br>
-
-            <progress value="80" max="100"></progress>
-        </section>
+    </section>
 
 
-        <hr>
-        <section id="contact">
-            <h2>Contact Us</h2>
+    <!-- ================= SEARCH RESULTS ================= -->
+    <section class="search-results" id="searchResults">
 
-            <form>
-                <label>Name:</label>
-                <input type="text" placeholder="Enter your name">
+        <h2>Search Results</h2>
 
-                <br><br>
-                <label>Email:</label>
-                <input type="email" placeholder="Enter your email">
+        <p id="resultText">
+            Search something from our website.
+        </p>
 
-                <br><br>
-                <label>Favorite Place:</label>
+    </section>
 
-                <select>
-                    <option>Hunza</option>
-                    <option>Swat</option>
-                    <option>Lahore</option>
-                    <option>Islamabad</option>
-                </select>
-                <br><br>
-                <label>Message:</label>
-                <br>
-                <textarea rows="5" cols="30"
-                    placeholder="Write your message"></textarea>
 
-                <br><br>
-                <input type="submit" value="Send Message">
-            </form>
-        </section>
-    </main>
-    <hr>
+    <!-- ================= ASK ME ================= -->
+    <section id="ask" class="ask-section">
 
+        <div class="section-heading">
+            <p>AI ASSISTANT</p>
+            <h2>Ask Me Anything</h2>
+            <span>
+                Have a question? Type it below and get an instant response.
+            </span>
+        </div>
+
+        <div class="ask-container">
+
+            <div class="ask-box">
+
+                <div class="assistant-icon">✦</div>
+
+                <h3>How can I help you?</h3>
+
+                <p>
+                    Ask about our services, products or website.
+                </p>
+
+                <div class="question-box">
+
+                    <input
+                        type="text"
+                        id="questionInput"
+                        placeholder="Type your question..."
+                    >
+
+                    <button onclick="askQuestion()">
+                        Ask
+                    </button>
+
+                </div>
+
+                <div id="answerBox">
+                    Your answer will appear here...
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="about section">
+
+        <div class="section-heading">
+            <p>ABOUT US</p>
+            <h2>Turning Ideas Into Reality</h2>
+            <span>
+                We create modern digital experiences with creativity,
+                technology and innovation.
+            </span>
+        </div>
+
+        <div class="about-content">
+
+            <div class="about-text">
+
+                <h3>Creative. Modern. Reliable.</h3>
+
+                <p>
+                    NovaSpace is a modern digital platform focused on
+                    creating useful and beautiful online experiences.
+                </p>
+
+                <p>
+                    Our goal is to combine technology and creativity
+                    to build solutions that make a difference.
+                </p>
+
+                <a href="#services" class="primary-btn">
+                    Discover More
+                </a>
+
+            </div>
+
+            <div class="stats">
+
+                <div class="stat-card">
+                    <h3>120+</h3>
+                    <p>Projects</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>80+</h3>
+                    <p>Clients</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>5+</h3>
+                    <p>Years Experience</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>24/7</h3>
+                    <p>Support</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services" class="services section">
+
+        <div class="section-heading">
+            <p>OUR SERVICES</p>
+            <h2>What We Do</h2>
+            <span>
+                Professional solutions designed for modern businesses.
+            </span>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-icon">◆</div>
+                <h3>Web Development</h3>
+                <p>Modern and responsive websites for every business.</p>
+                <a href="#">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">◇</div>
+                <h3>UI/UX Design</h3>
+                <p>Beautiful interfaces focused on great user experiences.</p>
+                <a href="#">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✦</div>
+                <h3>Digital Marketing</h3>
+                <p>Grow your online presence with smart strategies.</p>
+                <a href="#">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Branding</h3>
+                <p>Build a strong and memorable digital identity.</p>
+                <a href="#">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">◎</div>
+                <h3>SEO Optimization</h3>
+                <p>Improve your visibility and reach more people online.</p>
+                <a href="#">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">↗</div>
+                <h3>Business Solutions</h3>
+                <p>Technology solutions created for modern businesses.</p>
+                <a href="#">Learn More →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+    <section id="products" class="products section">
+
+        <div class="section-heading">
+            <p>FEATURED</p>
+            <h2>Our Products</h2>
+            <span>Explore our latest digital products and solutions.</span>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <div class="product-image">01</div>
+                <div class="product-info">
+                    <small>Digital</small>
+                    <h3>Smart Dashboard</h3>
+                    <p>Powerful dashboard for managing your business.</p>
+                    <button>View Product</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">02</div>
+                <div class="product-info">
+                    <small>Technology</small>
+                    <h3>Creative Platform</h3>
+                    <p>A modern platform for creative professionals.</p>
+                    <button>View Product</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">03</div>
+                <div class="product-info">
+                    <small>Business</small>
+                    <h3>Growth System</h3>
+                    <p>Tools designed to help businesses grow faster.</p>
+                    <button>View Product</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY US ================= -->
+    <section class="why-us section">
+
+        <div class="section-heading">
+            <p>WHY CHOOSE US</p>
+            <h2>Built For Your Success</h2>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <span>01</span>
+                <h3>Innovation</h3>
+                <p>We use creative ideas and modern technology.</p>
+            </div>
+
+            <div class="why-card">
+                <span>02</span>
+                <h3>Quality</h3>
+                <p>Every project is designed with attention to detail.</p>
+            </div>
+
+            <div class="why-card">
+                <span>03</span>
+                <h3>Fast Support</h3>
+                <p>We are always ready to help and support you.</p>
+            </div>
+
+            <div class="why-card">
+                <span>04</span>
+                <h3>Experience</h3>
+                <p>Professional solutions backed by experience.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GALLERY ================= -->
+    <section class="gallery section">
+
+        <div class="section-heading">
+            <p>OUR GALLERY</p>
+            <h2>Creative Showcase</h2>
+        </div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">01</div>
+            <div class="gallery-item">02</div>
+            <div class="gallery-item">03</div>
+            <div class="gallery-item">04</div>
+            <div class="gallery-item">05</div>
+            <div class="gallery-item">06</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="testimonials section">
+
+        <div class="section-heading">
+            <p>TESTIMONIALS</p>
+            <h2>What People Say</h2>
+        </div>
+
+        <div class="testimonial-box">
+
+            <div class="profile">A</div>
+
+            <div>
+                <h3 id="testimonialName">Alex Johnson</h3>
+
+                <div class="stars">★★★★★</div>
+
+                <p id="testimonialText">
+                    "Amazing service and a beautiful experience.
+                    Highly recommended!"
+                </p>
+            </div>
+
+        </div>
+
+        <div class="slider-buttons">
+            <button onclick="previousTestimonial()">←</button>
+            <button onclick="nextTestimonial()">→</button>
+        </div>
+
+    </section>
+
+
+    <!-- ================= FAQ ================= -->
+    <section class="faq section">
+
+        <div class="section-heading">
+            <p>FAQ</p>
+            <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <button onclick="toggleFAQ(this)">
+                    What services do you provide?
+                    <span>+</span>
+                </button>
+                <p>
+                    We provide web development, UI/UX design,
+                    branding, SEO and digital solutions.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <button onclick="toggleFAQ(this)">
+                    Is your website responsive?
+                    <span>+</span>
+                </button>
+                <p>
+                    Yes, our websites work on mobile, tablet and desktop.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <button onclick="toggleFAQ(this)">
+                    How can I contact you?
+                    <span>+</span>
+                </button>
+                <p>
+                    You can contact us through the contact form below.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NEWSLETTER ================= -->
+    <section class="newsletter section">
+
+        <div>
+            <p>STAY UPDATED</p>
+            <h2>Join Our Newsletter</h2>
+            <span>Get the latest updates directly in your inbox.</span>
+        </div>
+
+        <div class="newsletter-form">
+
+            <input
+                type="email"
+                id="emailInput"
+                placeholder="Enter your email"
+            >
+
+            <button onclick="subscribe()">
+                Subscribe
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="contact section">
+
+        <div class="section-heading">
+            <p>CONTACT US</p>
+            <h2>Let's Work Together</h2>
+            <span>Have a project in mind? Send us a message.</span>
+        </div>
+
+        <form class="contact-form" onsubmit="sendMessage(event)">
+
+            <div class="form-row">
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+            </div>
+
+            <input
+                type="text"
+                placeholder="Subject"
+                required
+            >
+
+            <textarea
+                placeholder="Your Message"
+                rows="6"
+                required
+            ></textarea>
+
+            <button type="submit" class="primary-btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
     <footer>
-        <p>Discover Pakistan, one beautiful place at a time.</p>
-        <p>&copy; 17/8/2026 Explore Pakistan. All Rights Reserved.</p>
-        <h5>To day my work this is very good and difficult</h5>
+
+        <div class="footer-content">
+
+            <div>
+                <div class="logo">
+                    Nova<span>Space</span>
+                </div>
+
+                <p>
+                    Creating modern digital experiences
+                    for a better future.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div>
+                <h3>Services</h3>
+                <a href="#">Web Development</a>
+                <a href="#">UI/UX Design</a>
+                <a href="#">SEO</a>
+                <a href="#">Branding</a>
+            </div>
+
+            <div>
+                <h3>Follow Us</h3>
+                <div class="socials">
+                    <a href="#">FB</a>
+                    <a href="#">IG</a>
+                    <a href="#">LI</a>
+                    <a href="#">YT</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Nexora ✨. All Rights Reserved.
+        </div>
+
     </footer>
-<script src="script.js"></script>
+</div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
-<!---Ye page par ek horizontal line banata hai, jisse different sections ko separate kiya jata hai.-->
